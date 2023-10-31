@@ -3,28 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guess the Number Game</title>
 </head>
 <body>
-    <h1>Guess the Number Game</h1>
-    <p>Computer's Guess: {{ computer_number }}</p>
+    <p>Is it: {{ computer_number }}?</p>
+
     <form method="post">
-    <button type="submit" name="choice" value="too small">Too Small</button>
-</form>
-
-<form method="post">
-    <button type="submit" name="choice" value="too big">Too Big</button>
-</form>
-
-<form method="post">
-    <button type="submit" name="choice" value="you win">You Win</button>
-</form>
+        <input type="hidden" name="min_number" value="{{ min_number }}">
+        <input type="hidden" name="max_number" value="{{ max_number }}">
+        <button type="submit" name="your_answer" value="too big">Too Big</button>
+        <button type="submit" name="your_answer" value="too small">Too Small</button>
+        <button type="submit" name="your_answer" value="you win">You Win</button>
+    </form>
 </body>
 </html>
-
-
-
-
-
-
-
